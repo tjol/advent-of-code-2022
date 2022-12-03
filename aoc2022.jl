@@ -25,6 +25,7 @@ end
 
 include("day01/day01.jl")
 include("day02/day02.jl")
+include("day03/day03.jl")
 
 checkresult(day01part1, "day01/demoinput", 24000)
 checkresult(day01part2, "day01/demoinput", 45000)
@@ -35,3 +36,8 @@ checkresult(day02part1, "day02/demoinput", 15)
 checkresult(day02part2, "day02/demoinput", 12)
 printresult(day02part1, "day02/input")
 printresult(day02part2, "day02/input")
+
+checkresult(day03part1, "day03/demoinput", 157)
+checkresult(day03part2, "day03/demoinput", 70)
+printresult(day03part1, "day03/input")
+printresult(day03part2, "day03/input")
