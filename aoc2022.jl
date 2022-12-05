@@ -9,7 +9,11 @@ function getresult(f, inputfile::String)
 end
 
 function getresult(f, inputio::IO)
-    f(read(inputio, String))
+    text = read(inputio, String)
+    if Sys.iswindows()
+        text = replace(text, "\r\n" => "\n")
+    end
+    f(text)
 end
 
 function checkresult(f, input, expected)
