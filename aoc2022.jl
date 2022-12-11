@@ -39,59 +39,73 @@ include("day09/day09.jl")
 include("day10/day10.jl")
 include("day11/day11.jl")
 
-checkresult(day01part1, "day01/demoinput", 24000)
-checkresult(day01part2, "day01/demoinput", 45000)
-printresult(day01part1, "day01/input")
-printresult(day01part2, "day01/input")
+function run(day)
+    if day == 1
+        checkresult(day01part1, "day01/demoinput", 24000)
+        checkresult(day01part2, "day01/demoinput", 45000)
+        printresult(day01part1, "day01/input")
+        printresult(day01part2, "day01/input")
+    elseif day == 2
+        checkresult(day02part1, "day02/demoinput", 15)
+        checkresult(day02part2, "day02/demoinput", 12)
+        printresult(day02part1, "day02/input")
+        printresult(day02part2, "day02/input")
+    elseif day == 3
+        checkresult(day03part1, "day03/demoinput", 157)
+        checkresult(day03part2, "day03/demoinput", 70)
+        printresult(day03part1, "day03/input")
+        printresult(day03part2, "day03/input")
+    elseif day == 4
+        checkresult(day04part1, "day04/demoinput", 2)
+        checkresult(day04part2, "day04/demoinput", 4)
+        printresult(day04part1, "day04/input")
+        printresult(day04part2, "day04/input")
+    elseif day == 5
+        checkresult(day05part1, "day05/demoinput", "CMZ")
+        checkresult(day05part2, "day05/demoinput", "MCD")
+        printresult(day05part1, "day05/input")
+        printresult(day05part2, "day05/input")
+    elseif day == 6
+        checkresult(day06part1, "day06/demoinput1", 7)
+        checkresult(day06part1, "day06/demoinput2", 5)
+        checkresult(day06part2, "day06/demoinput1", 19)
+        checkresult(day06part2, "day06/demoinput2", 23)
+        printresult(day06part1, "day06/input")
+        printresult(day06part2, "day06/input")
+    elseif day == 7
+        checkresult(day07part1, "day07/demoinput", 95437)
+        checkresult(day07part2, "day07/demoinput", 24933642)
+        printresult(day07part1, "day07/input")
+        printresult(day07part2, "day07/input")
+    elseif day == 8
+        checkresult(day08part1, "day08/demoinput", 21)
+        checkresult(day08part2, "day08/demoinput", 8)
+        printresult(day08part1, "day08/input")
+        printresult(day08part2, "day08/input")
+    elseif day == 9
+        checkresult(day09part1, "day09/demoinput", 13)
+        checkresult(day09part2, "day09/demoinput", 1)
+        printresult(day09part1, "day09/input")
+        printresult(day09part2, "day09/input")
+    elseif day == 10
+        checkresult(day10part1, "day10/demoinput", 13140)
+        printresult(day10part1, "day10/input")
+        printresult(day10part2, "day10/input")
+    elseif day == 11
+        checkresult(day11part1, "day11/demoinput", 10605)
+        checkresult(day11part2, "day11/demoinput", 2713310158)
+        printresult(day11part1, "day11/input")
+        printresult(day11part2, "day11/input")
+    end
+end
 
-checkresult(day02part1, "day02/demoinput", 15)
-checkresult(day02part2, "day02/demoinput", 12)
-printresult(day02part1, "day02/input")
-printresult(day02part2, "day02/input")
-
-checkresult(day03part1, "day03/demoinput", 157)
-checkresult(day03part2, "day03/demoinput", 70)
-printresult(day03part1, "day03/input")
-printresult(day03part2, "day03/input")
-
-checkresult(day04part1, "day04/demoinput", 2)
-checkresult(day04part2, "day04/demoinput", 4)
-printresult(day04part1, "day04/input")
-printresult(day04part2, "day04/input")
-
-checkresult(day05part1, "day05/demoinput", "CMZ")
-checkresult(day05part2, "day05/demoinput", "MCD")
-printresult(day05part1, "day05/input")
-printresult(day05part2, "day05/input")
-
-checkresult(day06part1, "day06/demoinput1", 7)
-checkresult(day06part1, "day06/demoinput2", 5)
-checkresult(day06part2, "day06/demoinput1", 19)
-checkresult(day06part2, "day06/demoinput2", 23)
-printresult(day06part1, "day06/input")
-printresult(day06part2, "day06/input")
-
-checkresult(day07part1, "day07/demoinput", 95437)
-checkresult(day07part2, "day07/demoinput", 24933642)
-printresult(day07part1, "day07/input")
-printresult(day07part2, "day07/input")
-
-checkresult(day08part1, "day08/demoinput", 21)
-checkresult(day08part2, "day08/demoinput", 8)
-printresult(day08part1, "day08/input")
-printresult(day08part2, "day08/input")
-
-checkresult(day09part1, "day09/demoinput", 13)
-checkresult(day09part2, "day09/demoinput", 1)
-printresult(day09part1, "day09/input")
-printresult(day09part2, "day09/input")
-
-checkresult(day10part1, "day10/demoinput", 13140)
-printresult(day10part1, "day10/input")
-printresult(day10part2, "day10/input")
-
-checkresult(day11part1, "day11/demoinput", 10605)
-checkresult(day11part2, "day11/demoinput", 2713310158)
-printresult(day11part1, "day11/input")
-printresult(day11part2, "day11/input")
-
+if length(ARGS) == 0
+    for day in 1:25
+        run(day)
+    end
+elseif length(ARGS) == 1
+    day = parse(Int, ARGS[1])
+    run(day)
+else
+    error("Require 0 or 1 args")
+end
