@@ -40,6 +40,7 @@ include("day10/day10.jl")
 include("day11/day11.jl")
 include("day12/day12.jl")
 include("day13/day13.jl")
+include("day14/day14.jl")
 
 function run(day)
     if day == 1
@@ -108,6 +109,11 @@ function run(day)
         checkresult(day13part2, "day13/demoinput", 140)
         printresult(day13part1, "day13/input")
         printresult(day13part2, "day13/input")
+    elseif day == 14
+        checkresult(day14part1, "day14/demoinput", 24)
+        checkresult(day14part2, "day14/demoinput", 93)
+        printresult(day14part1, "day14/input")
+        printresult(day14part2, "day14/input")
     end
 end
 
